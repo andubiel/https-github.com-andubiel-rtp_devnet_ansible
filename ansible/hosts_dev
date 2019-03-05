@@ -1,0 +1,5 @@
+[all:vars]
+ansible_python_interpreter="/usr/bin/env python"
+
+[core]
+127.0.0.1 port=2222

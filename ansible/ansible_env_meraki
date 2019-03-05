@@ -1,0 +1,5 @@
+export ANSIBLE_NET_USERNAME=cisco
+export ANSIBLE_NET_PASSWORD=cisco
+
+export auth_key: 6456c0d0a5edb432d6397adf7c0383a1362e4235
+

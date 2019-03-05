@@ -1,0 +1,6 @@
+---
+mgmt_interface: GigabitEthernet0/0
+snmp:
+  chassis_id: Prod_Switch_2
+  contact: NetDevOps Team
+  location: Production Rack 2

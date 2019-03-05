@@ -1,0 +1,2 @@
+export ANSIBLE_NET_USERNAME=vagrant
+export ANSIBLE_NET_PASSWORD=vagrant

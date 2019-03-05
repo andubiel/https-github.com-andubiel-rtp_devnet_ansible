@@ -1,0 +1,16 @@
+---
+- name: Test Common Network Management Functions
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Test SNMP Community String Access
+      snmp_facts:
+        host: '{{ inventory_hostname }}'
+        version: v2c
+        community: "{{ global_snmp.read_community }}"
+
+    - name: Print Sample SNMP Retrieved Details
+      debug:
+        msg: "SNMP System Name: {{ ansible_sysname }} SNMP OID: {{ ansible_sysobjectid }}"

@@ -1,0 +1,17 @@
+# Global Configuration Parameters
+global_ntp:
+  servers:
+    - 192.168.1.70
+global_dns:
+  domain_name: netdevops.intra
+  servers:
+    - 192.168.1.70
+global_snmp:
+  servers:
+    - 192.168.1.70
+  read_community: SecureReadFeb12
+  write_community: SecureWriteFeb12
+  traps_list: snmp linkdown linkup
+global_syslog:
+  servers:
+    - 192.168.1.70

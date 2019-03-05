@@ -1,0 +1,35 @@
+---
+- name: Test Network Available
+  hosts: all
+  connection: local
+  gather_facts: false
+  any_errors_fatal: true
+
+  tasks:
+    - name: Ensure all devices are up and responding.
+      wait_for:
+        host: "{{ inventory_hostname }}"
+        port: "{{ port | default('22') }}"
+        delay: 3
+        sleep: 10
+        timeout: 600
+
+- name: Gather Info on Network
+  hosts: all
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Get IOS Info
+      ios_facts:
+        provider:
+          host: "{{ inventory_hostname }}"
+          port: "{{ port | default('22') }}"
+
+- name: Deploy Common Network Configuration
+  hosts: all
+  connection: local
+  gather_facts: false
+
+  roles:
+    - common

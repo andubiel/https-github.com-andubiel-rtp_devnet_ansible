@@ -1,0 +1,6 @@
+---
+mgmt_interface: GigabitEthernet1
+snmp:
+  chassis_id: Vagrant CSR
+  contact: NetDevOps Team
+  location: NetDev Workstation

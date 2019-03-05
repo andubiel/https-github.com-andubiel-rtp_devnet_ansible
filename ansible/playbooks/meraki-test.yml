@@ -1,0 +1,20 @@
+- name: Meraki Test Vlan Port
+  hosts: meraki
+  connection: local
+  gather_facts: no
+  vars_files:
+    - host_vars/meraki-test.yaml
+  tasks:
+    
+    - name: Configure Test Port Vlan
+      meraki_switchport:
+        auth_key: "{{ Auth_key }}"
+        state: present
+        serial: "{{ Serial }}"
+        number: "{{ Number }}"
+        enabled: true
+        name: "{{ Name }}"
+        tags: "{{ Tags }}"
+        type: "{{ Type }}"
+        vlan: "{{ Vlan }}"
+      delegate_to: localhost

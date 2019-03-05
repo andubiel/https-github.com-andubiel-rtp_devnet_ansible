@@ -1,0 +1,6 @@
+---
+mgmt_interface: GigabitEthernet0/0
+snmp:
+  chassis_id: Test_Switch_1
+  contact: NetDevOps Team
+  location: VIRL Test Simulation

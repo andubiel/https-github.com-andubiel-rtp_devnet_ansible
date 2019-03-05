@@ -1,0 +1,6 @@
+---
+mgmt_interface: GigabitEthernet3
+snmp:
+  chassis_id: csr1000v-4
+  contact: NetDevOps Team
+  location: VIRL Prod  Simulation
